@@ -1,0 +1,9 @@
+[user]
+	email = bailey.cj@gmail.com 
+	name = Christopher J. Bailey
+[push]
+	default = simple
+
+[core]
+	excludesfile = /Users/cjb/.gitignore
+	editor = vim
