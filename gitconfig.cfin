@@ -5,5 +5,5 @@
 #	default = simple
 
 [core]
-    excludesfile = /Users/cjb/.gitignore
+    excludesfile = /users/cjb/.gitignore
 	editor = vim
