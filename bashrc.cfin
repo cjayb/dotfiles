@@ -1,0 +1,102 @@
+# Set TERM to linux for unknown type or unset variable:
+if [ "$TERM" == "" -o "$TERM" == "unknown" -o "$TERM" == "xterm-256color" ]; then
+ TERM=vt100
+fi
+export TERM
+
+#if [ ! -z "$PS1" ]; then
+# test whether STDIN is running in a TERMINAL (i.e. interactive)
+if [ -t 0 ]; then
+        #echo This shell is interactive
+	if [[ ${DISPLAY} ]]; then xset -b; fi
+fi
+# Set a default shell prompt:
+PS1='\u@\h:\w\$ '
+#PS2='> '
+
+# function prompt_command {
+#   #   How many characters of the $PWD should be kept
+#   local pwd_length=23
+#   if [ $(echo -n $PWD | wc -c | tr -d " ") -gt $pwd_length ]
+#     then newPWD="$(echo -n $PWD | sed -e "s/.*\(.\{$pwd_length\}\)/\1/")"
+#     else newPWD="$(echo -n $PWD)"
+#   fi
+# }
+# PROMPT_COMMAND=prompt_command
+# export PROMPT_COMMAND
+#PS1='\e[7m$newPWD  [\u@\h]:\[\e[0;m\] '
+
+
+export TERM PS1 PS2
+
+
+export LC_ALL=en_US.UTF-8
+
+
+# This is for mainstream users,
+#source /opt/local/scripts/setup_environment.sh
+# but I want bleeding edge
+#source ~/CFIN/git-repos/scripts/setup_environment.sh
+
+#if [[ $HOSTNAME == isis ]] && [[ ${DISPLAY} ]]
+if [[ -t 0 && $HOSTNAME == isis ]]
+then
+	#source /opt/local/cfin-tools/configurations/setup_environment.sh 
+	source ~/src/git/cfin-tools/configurations/setup_environment.sh 
+	use mne
+	gitprompt
+	alias emacs='/opt/local/emacs24/bin/emacs'
+	#export PATH=/usr/local/common/GridEngine/bin/lx24-amd64:${PATH}
+	set_freesurfer_subject ()
+	{
+		#echo "N inputs = $#"
+
+		export SUBJECTS_DIR=/volatile/cjb/freesurfer/subjects
+
+		if [ $# -lt 1 ]; then
+			SUBJECT=`ls -w1c $SUBJECTS_DIR/ | zenity --list --text="Select subject" --column="Available subjects" --separator=""`
+			if [ $? -eq 0 ]; then 
+				export SUBJECT
+			fi
+		else
+			if [ -d $SUBJECTS_DIR/$1 ]; then
+				export SUBJECT=$1
+			else
+				echo "Unknown subject: $1"
+			fi
+		fi			
+	}
+fi
+
+alias ll='ls -l --color'
+alias la='ls -la --color'
+alias enw='emacs -nw'
+alias edt='emacs'
+
+# FSL Configuration
+#FSLDIR=/usr/local/fsl
+#PATH=${FSLDIR}/bin:${PATH}
+#. ${FSLDIR}/etc/fslconf/fsl.sh
+#export FSLDIR PATH
+
+#if [[ $HOSTNAME == 'tiger' ]]
+#then 
+#echo "Welcome to tiger." 
+#else
+#	[[ -s /users/cjb/.pythonbrew/etc/bashrc ]] && source /users/cjb/.pythonbrew/etc/bashrc
+#	echo "Skipping pythonbrew altogether..."
+#fi
+
+#if [[ $HOSTNAME == 'isis' ]]
+#then
+
+# Added by Canopy installer on 2013-09-24
+# VIRTUAL_ENV_DISABLE_PROMPT can be set to '' to make bashprompt show that Canopy is active, otherwise 1
+# VIRTUAL_ENV_DISABLE_PROMPT=1 source /venvs/cjb/canopy/Canopy_64bit/User/bin/activate
+# export PATH=/volatile/cjb/git/mne-python/bin:$PATH
+#export PATH=/usr/local/common/anaconda/bin:$PATH
+#export PATH=~/.local/bin:$PATH
+#fi
+
+#export MNE_PYTHON=/users/cjb/src/git/mne-python
+#export ETS_TOOLKIT="qt4"
