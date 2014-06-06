@@ -12,6 +12,7 @@ export LC_ALL=en_US.UTF-8
 
 alias ll='ls -l -color'
 alias la='ls -la -color'
+alias vim='mvim -v'
 
 alias wget_dir='wget -nH -r --level=1 -k -p'
 

@@ -6,9 +6,54 @@ syntax on                           " syntax highlighing
 filetype on                          " try to detect filetypes
 filetype plugin indent on    " enable loading indent file for filetype
 
-" Line numbering on
-set number
+set t_Co=256 " make sure vim realises terminal is 256 colors
+syntax enable
+set background=dark
+colorscheme molokai
+" solarized options 
+"let g:solarized_visibility = "high"
+"let g:solarized_contrast = "high"
+"colorscheme solarized
 
+set lbr
+set showbreak=… "show the '…' character at the beginning of a line
+set number
+set colorcolumn:81
+
+" I'm prefer spaces to tabs
+set tabstop=4
+set shiftwidth=4
+set expandtab
+"
+set spell spelllang=en_gb
+"
+set guifont=DejaVu\ Sans\ Mono\ 14
+set smartindent
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
+" Airline settings
+set laststatus=2
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline_theme='jellybeans'
+
+let g:airline#extensions#tmuxline#enabled = 0 
+
+
+"jedi settings 
+let g:acp_enableAtStartup = 1
+let g:jedi#use_splits_not_buffers = "left"
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+
+
+"
+"
+"
 " colorscheme distinguished
 " colorscheme jellybeans
 " colorscheme molokai
