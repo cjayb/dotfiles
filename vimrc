@@ -10,10 +10,6 @@ set t_Co=256 " make sure vim realises terminal is 256 colors
 syntax enable
 set background=dark
 colorscheme molokai
-" solarized options 
-"let g:solarized_visibility = "high"
-"let g:solarized_contrast = "high"
-"colorscheme solarized
 
 set lbr
 set showbreak=… "show the '…' character at the beginning of a line
