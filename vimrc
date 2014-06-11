@@ -9,7 +9,7 @@ filetype plugin indent on    " enable loading indent file for filetype
 set t_Co=256 " make sure vim realises terminal is 256 colors
 syntax enable
 set background=dark
-colorscheme molokai
+colorscheme jellybeans
 
 set lbr
 set showbreak=… "show the '…' character at the beginning of a line
