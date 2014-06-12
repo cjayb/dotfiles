@@ -6,6 +6,7 @@ Installation instructions:
 	ln -s dotfiles/vimrc .vimrc
 	ln -s dotfiles/gvimrc .gvimrc
 	ln -s dotfiles/bashrc .bashrc
+    ln -s dotfiles/git-completion.bash .git-completion.bash
 	cd ~/.vim
 	git submodule init
 	git submodule update
