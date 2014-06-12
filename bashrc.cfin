@@ -73,9 +73,6 @@ alias la='ls -la --color'
 alias enw='emacs -nw'
 alias edt='emacs'
 
-if [ -f ~/.git-completion.bash ]; then
-	. ~/.git-completion.bash
-fi
 # FSL Configuration
 #FSLDIR=/usr/local/fsl
 #PATH=${FSLDIR}/bin:${PATH}
