@@ -1,8 +1,8 @@
-#if [ -t 0 ]; then
-#	source .bash-colors.sh
-#	source .git-prompt.sh
-#	export PS1="\[$Green\][\w]\[$Purple\]\$(__git_ps1)\n\[$BCyan\]\u@\[$BYellow\]\h\[\033[1;33m\] \[$White\]\$ \[$Color_Off\]"
-#fi
+if [ -t 0 ]; then
+	source .bash-colors.sh
+	source .git-prompt.sh
+	export PS1="\[$Green\][\w]\[$Purple\]\$(__git_ps1)\n\[$BCyan\]\u@\[$BYellow\]\h\[\033[1;33m\] \[$White\]\$ \[$Color_Off\]"
+fi
 
 # These are needed for spyder to work
 # See also: https://groups.google.com/forum/?fromgroups=#!topic/spyderlib/KZ4RxuZ3snc
