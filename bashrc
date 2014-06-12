@@ -1,6 +1,6 @@
 if [ -t 0 ]; then
-	source .bash-colors.sh
-	source .git-prompt.sh
+	source ~/.bash-colors.sh
+	source ~/.git-prompt.sh
 	export PS1="\[$Green\][\w]\[$Purple\]\$(__git_ps1)\n\[$BCyan\]\u@\[$BYellow\]\h\[\033[1;33m\] \[$White\]\$ \[$Color_Off\]"
 fi
 
