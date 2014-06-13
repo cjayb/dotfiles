@@ -34,9 +34,8 @@ set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline_theme='jellybeans'
-
+let g:airline_powerline_fonts=1
 let g:airline#extensions#tmuxline#enabled = 0 
-
 
 "jedi settings 
 "let g:acp_enableAtStartup = 1
