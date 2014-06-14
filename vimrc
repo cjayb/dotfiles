@@ -23,11 +23,11 @@ set expandtab
 "
 "set spell spelllang=en_gb
 "
-"set guifont=DejaVu\ Sans\ Mono\ 14
 set smartindent
-set tabstop=4
-set shiftwidth=4
-set expandtab
+
+" default split openings
+set splitright
+set splitbelow
 
 " Airline settings
 set laststatus=2
