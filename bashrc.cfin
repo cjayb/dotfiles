@@ -1,3 +1,4 @@
+stty stop undef # to unmap ctrl-s
 # Set TERM to linux for unknown type or unset variable:
 if [ "$TERM" == "" -o "$TERM" == "unknown" -o "$TERM" == "xterm-256color" ]; then
  TERM=vt100

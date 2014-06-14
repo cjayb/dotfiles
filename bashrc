@@ -1,3 +1,5 @@
+stty stop undef # to unmap ctrl-s
+
 if [ -t 0 ]; then
 	source ~/.bash-colors.sh
 	source ~/.git-prompt.sh
