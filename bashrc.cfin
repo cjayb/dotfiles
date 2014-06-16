@@ -74,7 +74,7 @@ alias ll='ls -l --color'
 alias la='ls -la --color'
 alias enw='emacs -nw'
 alias edt='emacs'
-alias gotoproj='gtp'
+alias gtp='gotoproj'
 
 # FSL Configuration
 #FSLDIR=/usr/local/fsl
