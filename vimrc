@@ -24,6 +24,8 @@ set expandtab
 "set spell spelllang=en_gb
 "
 set smartindent
+set foldmethod=indent
+set foldnestmax=1
 
 " default split openings
 set splitright
