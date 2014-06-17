@@ -47,6 +47,7 @@ then
 	use mne
 	gitprompt
 	alias emacs='/opt/local/emacs24/bin/emacs'
+	alias vim='/opt/local/vim74/bin/vim'
 	#export PATH=/usr/local/common/GridEngine/bin/lx24-amd64:${PATH}
 	set_freesurfer_subject ()
 	{
@@ -73,6 +74,7 @@ alias ll='ls -l --color'
 alias la='ls -la --color'
 alias enw='emacs -nw'
 alias edt='emacs'
+alias gtp='gotoproj'
 
 # FSL Configuration
 #FSLDIR=/usr/local/fsl
