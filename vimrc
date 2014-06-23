@@ -46,7 +46,8 @@ let g:airline#extensions#tmuxline#enabled = 0
 let g:SuperTabDefaultCompletionType = "context"
 
 "jedi settings 
-let g:acp_enableAtStartup = 1
+let g:jedi#auto_initialization = 1
+let g:jedi#popup_on_dot = 0
 "let g:jedi#use_splits_not_buffers = "left"
 "let g:UltiSnipsExpandTrigger="<tab>"
 "let g:UltiSnipsJumpForwardTrigger="<tab>"
