@@ -16,10 +16,11 @@ set showbreak=… "show the '…' character at the beginning of a line
 set number
 set colorcolumn:81
 
-" I'm prefer spaces to tabs
-set tabstop=4
-set shiftwidth=4
+" prefer spaces to tabs
 set expandtab
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
 "
 "set spell spelllang=en_gb
 "
