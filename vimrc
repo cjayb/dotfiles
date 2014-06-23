@@ -23,7 +23,7 @@ set expandtab
 "
 "set spell spelllang=en_gb
 "
-set smartindent
+set autoindent
 
 " Remove folding: slows vim down!
 "set foldmethod=indent
