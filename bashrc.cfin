@@ -6,6 +6,8 @@ then
      export TERM=vt100
     fi
     export TERM
+else
+    export TERM=xterm-256color
 fi
 
 #if [ ! -z "$PS1" ]; then
