@@ -1,8 +1,12 @@
 # Set TERM to linux for unknown type or unset variable:
-if [ "$TERM" == "" -o "$TERM" == "unknown" -o "$TERM" == "xterm-256color" ]; then
- TERM=vt100
+# This is really just for the benefit of tiger, so make it so
+if [[ -t 0 && $HOSTNAME == tiger ]]
+then
+    if [ "$TERM" == "" -o "$TERM" == "unknown" -o "$TERM" == "xterm-256color" ]; then
+     export TERM=vt100
+    fi
+    export TERM
 fi
-export TERM
 
 #if [ ! -z "$PS1" ]; then
 # test whether STDIN is running in a TERMINAL (i.e. interactive)

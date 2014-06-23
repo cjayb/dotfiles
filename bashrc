@@ -1,6 +1,7 @@
-stty stop undef # to unmap ctrl-s
-
 if [ -t 0 ]; then
+    stty stop undef # to unmap ctrl-s
+    export TERM=screen-256color # for the benefit of tmux in iterm
+
 	source ~/.bash-colors.sh
 	source ~/.git-prompt.sh
 	export PS1="\[$Green\][\w]\[$Purple\]\$(__git_ps1)\n\[$BCyan\]\u@\[$BYellow\]\h\[\033[1;33m\] \[$White\]\$ \[$Color_Off\]"
