@@ -46,7 +46,7 @@ export LC_ALL=en_US.UTF-8
 #source ~/CFIN/git-repos/scripts/setup_environment.sh
 
 #if [[ $HOSTNAME == isis ]] && [[ ${DISPLAY} ]]
-if [[ -t 0 && $HOSTNAME == isis ]]
+if [[ -t 0 && ( $HOSTNAME == isis || $HOSTNAME == set ) ]]
 then
 	#source /opt/local/cfin-tools/configurations/setup_environment.sh 
 	source ~/src/git/cfin-tools/configurations/setup_environment.sh 
