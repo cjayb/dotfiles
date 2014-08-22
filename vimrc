@@ -11,6 +11,9 @@ syntax enable
 set background=dark
 colorscheme jellybeans
 
+" force md=markdown, not modula2!
+autocmd BufNewFile,BufRead *.md set filetype=markdown
+
 set lbr
 set showbreak=… "show the '…' character at the beginning of a line
 set number
