@@ -45,3 +45,5 @@ export OMP_NUM_THREADS
 export PATH=/Users/cjb/anaconda/bin:$PATH
 export PATH=/Users/cjb/.local/bin:$PATH
 export QT_API=pyside
+
+export PATH="$HOME/Library/Haskell/bin:$PATH"
