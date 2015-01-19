@@ -1,0 +1,30 @@
+Host tiger 
+User cjb
+HostName tiger.pet.auh.dk 
+
+Host tiger80 
+User cjb
+HostName tiger.pet.auh.dk 
+LocalForward 10080 tiger.pet.auh.dk:80
+
+Host wiki 
+User cjb
+HostName tiger.pet.auh.dk 
+LocalForward 10080 wiki.pet.auh.dk:80 
+
+Host isis 
+User cjb
+HostName isis.pet.auh.dk
+
+Host isis99 
+User cjb
+HostName tiger.pet.auh.dk
+LocalForward 5999 isis:5999
+
+Host sinuhe3 
+User cjb
+HostName tiger.pet.auh.dk
+LocalForward 5903 sinuhe:5903
+
+Host hyades01 
+ProxyCommand ssh -q tiger /usr/bin/nc -c %h 22
