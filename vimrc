@@ -13,6 +13,8 @@ colorscheme jellybeans
 
 " force md=markdown, not modula2!
 autocmd BufNewFile,BufRead *.md set filetype=markdown
+" force ipy=python (ipython)
+autocmd BufNewFile,BufRead *.ipy set filetype=python
 
 set lbr
 set showbreak=… "show the '…' character at the beginning of a line
