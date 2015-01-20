@@ -12,6 +12,9 @@ fi
 export LANG=en_US.UTF-8 
 export LC_ALL=en_US.UTF-8 
 
+# Colour for ls command under OS X
+export CLICOLOR=1
+export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
 
 alias ll='ls -l -color'
 alias la='ls -la -color'
