@@ -31,6 +31,12 @@ set shiftwidth=4
 "
 set autoindent
 
+" moving around splits
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+
 " Remove folding: slows vim down!
 "set foldmethod=indent
 "set foldnestmax=1
