@@ -1,11 +1,11 @@
 [user]
 	email = bailey.cj@gmail.com 
 	name = Christopher J. Bailey
-#[push]
-#	default = simple
+[push]
+	default = simple
 
 [core]
     excludesfile = /Users/cjb/.gitignore
 	editor = vim
-[push]
-	default = matching
+[credential]
+	helper = cache --timeout=3600

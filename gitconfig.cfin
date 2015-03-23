@@ -1,8 +1,8 @@
 [user]
 	email = bailey.cj@gmail.com 
 	name = Christopher J. Bailey
-#[push]
-#	default = simple
+[push]
+	default = simple
 
 [core]
     excludesfile = /users/cjb/.gitignore
