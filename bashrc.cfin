@@ -82,6 +82,8 @@ alias enw='emacs -nw'
 alias edt='emacs'
 alias gtp='gotoproj'
 
+export QT_API=pyqt
+
 # FSL Configuration
 #FSLDIR=/usr/local/fsl
 #PATH=${FSLDIR}/bin:${PATH}
