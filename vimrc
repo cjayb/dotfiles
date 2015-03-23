@@ -57,12 +57,22 @@ let g:airline#extensions#tmuxline#enabled = 0
 let g:SuperTabDefaultCompletionType = "context"
 
 "jedi settings 
-let g:jedi#auto_initialization = 1
+let g:jedi#auto_initialization = 0
 let g:jedi#popup_on_dot = 0
 "let g:jedi#use_splits_not_buffers = "left"
 "let g:UltiSnipsExpandTrigger="<tab>"
 "let g:UltiSnipsJumpForwardTrigger="<tab>"
 "let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+" for removing ropi in pymode (conflicts with jedi)
+let g:pymode = 0
+let g:pymode_rope = 0
+"let g:pymode_warnings = 1
+" Not quite ready to lint yet...
+let g:pymode_lint = 0
+let g:pymode_lint_unmodified = 0
+" not ready for folding either, but here it is
+let g:pymode_folding = 0
 
 nnoremap <F5> :GundoToggle<CR>
 

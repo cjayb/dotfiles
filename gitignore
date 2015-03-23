@@ -9,6 +9,7 @@
 *.pyc
 
 *.swp
+*.swo
 *~
 # vim stuff
 *.netrwhist
