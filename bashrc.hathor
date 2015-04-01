@@ -47,6 +47,9 @@ export OMP_NUM_THREADS
 
 export PATH=/Users/cjb/anaconda/bin:$PATH
 export PATH=/Users/cjb/.local/bin:$PATH
-export QT_API=pyside
+
+# anaconda prefers PyQt4 as the API
+# change to pyside if troubles
+export QT_API=pyqt
 
 export PATH="$HOME/Library/Haskell/bin:$PATH"
