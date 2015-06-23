@@ -1,6 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/Users/cjb/.ipython/profile_default'
-let g:netrw_dirhist_2='/Users/cjb/.ipython/profile_default/startup'
-let g:netrw_dirhist_3='/Users/cjb/.emacs.d/el-get'
-let g:netrw_dirhist_4='/Users/cjb/dotfiles/vim'

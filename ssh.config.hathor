@@ -28,3 +28,11 @@ LocalForward 5903 sinuhe:5903
 
 Host hyades01 
 ProxyCommand ssh -q tiger /usr/bin/nc -c %h 22
+
+Host isis_ipynb
+User cjb
+HostName isis
+LocalForward 8099 localhost:8099
+
+#Host isis
+#ProxyCommand ssh -q tiger.pet.auh.dk /usr/bin/nc -c %h 22
