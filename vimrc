@@ -8,24 +8,30 @@ call plug#begin('~/.vim/plugged')
 Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/vim-easy-align'
 
-" Group dependencies, vim-snippets depends on ultisnips
-Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+Plug 'davidhalter/jedi-vim'
+Plug 'tpope/vim-fugitive'
+Plug 'ervandew/supertab'
+Plug 'bling/vim-airline'
+
+Plug 'ivanov/vim-ipython', {'dir': '~/.vim/ftplugin'}
 
 " On-demand loading
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 
-" Using git URL
-Plug 'https://github.com/junegunn/vim-github-dashboard.git'
-
-" Plugin options
-Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
-
-" Plugin outside ~/.vim/plugged with post-update hook
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
-
-" Unmanaged plugin (manually installed and updated)
-Plug '~/my-prototype-plugin'
+" " These examples from https://github.com/junegunn/vim-plug
+" Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
+" 
+" " Using git URL
+" Plug 'https://github.com/junegunn/vim-github-dashboard.git'
+" 
+" " Plugin options
+" Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
+" 
+" " Plugin outside ~/.vim/plugged with post-update hook
+" Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
+" 
+" " Unmanaged plugin (manually installed and updated)
+" Plug '~/my-prototype-plugin'
 
 call plug#end()
 
@@ -38,6 +44,17 @@ set t_Co=256 " make sure vim realises terminal is 256 colors
 syntax enable
 set background=dark
 colorscheme jellybeans
+" seoul256 (dark):
+" "   Range:   233 (darkest) ~ 239 (lightest)
+" "   Default: 237
+let g:seoul256_background = 234
+colo seoul256
+"
+" " seoul256 (light):
+" "   Range:   252 (darkest) ~ 256 (lightest)
+" "   Default: 253
+" let g:seoul256_background = 256
+" colo seoul256
 
 " force md=markdown, not modula2!
 autocmd BufNewFile,BufRead *.md set filetype=markdown
@@ -74,20 +91,20 @@ set splitright
 set splitbelow
 
 " Airline settings
-"set laststatus=2
-"let g:airline#extensions#tabline#enabled = 1
-"let g:airline#extensions#tabline#left_alt_sep = '|'
-"let g:airline_theme='jellybeans'
-"let g:airline_powerline_fonts=1
-"let g:airline#extensions#tmuxline#enabled = 0 
+set laststatus=2
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline_theme='jellybeans'
+let g:airline_powerline_fonts=1
+let g:airline#extensions#tmuxline#enabled = 0 
 
 " supertab settings
-" let g:SuperTabDefaultCompletionType = "context"
+let g:SuperTabDefaultCompletionType = "context"
 
 "jedi settings 
-"let g:jedi#auto_initialization = 1
-"let g:jedi#popup_on_dot = 0
-"let g:jedi#show_call_signatures = 0
+let g:jedi#auto_initialization = 1
+let g:jedi#popup_on_dot = 0
+let g:jedi#show_call_signatures = 0
 "
 "let g:jedi#use_splits_not_buffers = "left"
 "let g:UltiSnipsExpandTrigger="<tab>"

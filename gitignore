@@ -13,3 +13,5 @@
 *~
 # vim stuff
 *.netrwhist
+vim/bundle
+vim/plugged
