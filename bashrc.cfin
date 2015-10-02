@@ -37,7 +37,7 @@ then
 	use mne
 	gitprompt
 	# alias emacs='/opt/local/emacs24/bin/emacs'
-	# alias vim='/opt/local/vim74/bin/vim'
+	alias vim='/opt/local/vim74/bin/vim'
     #
 	#export PATH=/usr/local/common/GridEngine/bin/lx24-amd64:${PATH}
 	set_freesurfer_subject ()
