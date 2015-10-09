@@ -66,6 +66,7 @@ alias la='ls -la --color'
 alias enw='emacs -nw'
 alias edt='emacs'
 alias gtp='gotoproj'
+alias uskb='setxkbmap us'
 
 export QT_API=pyqt
 export MNE_PYTHON=/users/cjb/src/git/mne-python
