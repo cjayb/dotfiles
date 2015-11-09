@@ -25,17 +25,12 @@ export TERM PS1 PS2
 
 export LC_ALL=en_US.UTF-8
 
-# This is for mainstream users,
-#source /opt/local/scripts/setup_environment.sh
-# but I want bleeding edge
-#source ~/CFIN/git-repos/scripts/setup_environment.sh
+source ~/src/git/cfin-tools/configurations/setup_environment.sh 
+use mne
+gitprompt
 
 if [[ -t 0 && ( $HOSTNAME == isis || $HOSTNAME == seth ) ]]
 then
-	#source /opt/local/cfin-tools/configurations/setup_environment.sh 
-	source ~/src/git/cfin-tools/configurations/setup_environment.sh 
-	use mne
-	gitprompt
 	# alias emacs='/opt/local/emacs24/bin/emacs'
 	alias vim='/opt/local/vim74/bin/vim'
     #
