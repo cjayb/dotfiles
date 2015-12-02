@@ -12,10 +12,6 @@ User cjb
 HostName tiger.pet.auh.dk 
 LocalForward 10080 wiki.pet.auh.dk:80 
 
-Host isis 
-User cjb
-HostName isis.pet.auh.dk
-
 Host isis_rdp
 User cjb
 HostName tiger.pet.auh.dk
