@@ -1,22 +1,3 @@
-# Set TERM to linux for unknown type or unset variable:
-# This is really just for the benefit of tiger, so make it so
-if [[ -t 0 && $HOSTNAME == tiger ]]
-then
-    if [ "$TERM" == "" -o "$TERM" == "unknown" -o "$TERM" == "xterm-256color" ]; then
-     export TERM=vt100
-    fi
-    export TERM
-else
-    export TERM=xterm-256color
-fi
-
-#if [ ! -z "$PS1" ]; then
-# test whether STDIN is running in a TERMINAL (i.e. interactive)
-if [ -t 0 ]; then
-        #echo This shell is interactive
-	if [[ ${DISPLAY} ]]; then xset -b; fi
-    stty stop undef # to unmap ctrl-s
-fi
 # Set a default shell prompt:
 PS1='\u@\h:\w\$ '
 #PS2='> '
@@ -25,9 +6,15 @@ export TERM PS1 PS2
 
 export LC_ALL=en_US.UTF-8
 
-source ~/src/git/cfin-tools/configurations/setup_environment.sh 
-use mne
-gitprompt
+# test whether STDIN is running in a TERMINAL (i.e. interactive)
+if [ -t 0 ]; then
+        #echo This shell is interactive
+	if [[ ${DISPLAY} ]]; then xset -b; fi
+    stty stop undef # to unmap ctrl-s
+    source ~/src/git/meeg-cfin/configurations/setup_environment.sh 
+    use mne
+    gitprompt
+fi
 
 if [[ -t 0 && ( $HOSTNAME == isis || $HOSTNAME == seth ) ]]
 then
@@ -72,16 +59,3 @@ export ETS_TOOLKIT="qt4"
 #PATH=${FSLDIR}/bin:${PATH}
 #. ${FSLDIR}/etc/fslconf/fsl.sh
 #export FSLDIR PATH
-
-
-#if [[ $HOSTNAME == 'isis' ]]
-#then
-
-# Added by Canopy installer on 2013-09-24
-# VIRTUAL_ENV_DISABLE_PROMPT can be set to '' to make bashprompt show that Canopy is active, otherwise 1
-# VIRTUAL_ENV_DISABLE_PROMPT=1 source /venvs/cjb/canopy/Canopy_64bit/User/bin/activate
-# export PATH=/volatile/cjb/git/mne-python/bin:$PATH
-#export PATH=/usr/local/common/anaconda/bin:$PATH
-#export PATH=~/.local/bin:$PATH
-#fi
-
