@@ -8,15 +8,15 @@ call plug#begin('~/.vim/plugged')
 Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/vim-easy-align'
 
-Plug 'davidhalter/jedi-vim'
-Plug 'tpope/vim-fugitive'
+" Plug 'davidhalter/jedi-vim'
+" Plug 'tpope/vim-fugitive'
 Plug 'ervandew/supertab'
 Plug 'bling/vim-airline'
 
-Plug 'ivanov/vim-ipython', {'dir': '~/.vim/ftplugin'}
+" Plug 'ivanov/vim-ipython', {'dir': '~/.vim/ftplugin'}
 
 " On-demand loading
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+" Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 
 " " These examples from https://github.com/junegunn/vim-plug
 " Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
