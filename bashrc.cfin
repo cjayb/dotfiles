@@ -54,6 +54,9 @@ export QT_API=pyqt
 export MNE_PYTHON=/users/cjb/src/git/mne-python
 export ETS_TOOLKIT="qt4"
 
+export JUPYTER_DATA_DIR=~/.local/share/jupyter
+export JUPYTER_RUNTIME_DIR=${JUPYTER_DATA_DIR}/runtime
+
 # FSL Configuration
 #FSLDIR=/usr/local/fsl
 #PATH=${FSLDIR}/bin:${PATH}
