@@ -1,20 +1,17 @@
 # Set a default shell prompt:
 PS1='\u@\h:\w\$ '
-#PS2='> '
+export PS1
 
-export TERM PS1 PS2
-
-export LC_ALL=en_US.UTF-8
 
 # test whether STDIN is running in a TERMINAL (i.e. interactive)
-if [ -t 0 ]; then
-        #echo This shell is interactive
+# if [ -t 0 ]; then
+    # echo This shell is interactive
 	if [[ ${DISPLAY} ]]; then xset -b; fi
     stty stop undef # to unmap ctrl-s
     source ~/src/git/meeg-cfin/configurations/setup_environment.sh 
     use mne
     gitprompt
-fi
+# fi
 
 if [[ -t 0 && ( $HOSTNAME == isis || $HOSTNAME == seth ) ]]
 then
@@ -50,6 +47,7 @@ alias edt='emacs'
 alias gtp='gotoproj'
 alias uskb='setxkbmap us'
 
+export LC_ALL=en_US.UTF-8
 export QT_API=pyqt
 export MNE_PYTHON=/users/cjb/src/git/mne-python
 export ETS_TOOLKIT="qt4"
