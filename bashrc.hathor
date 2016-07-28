@@ -1,17 +1,18 @@
 if [ -t 0 ]; then
-    stty stop undef # to unmap ctrl-s
-    export TERM=screen-256color # for the benefit of tmux in iterm
+  stty stop undef # to unmap ctrl-s
+  export TERM=screen-256color # for the benefit of tmux in iterm
 
 	source ~/.bash-colors.sh
 	source ~/.git-prompt.sh
 	export PS1="\[$Green\][\w]\[$Purple\]\$(__git_ps1)\n\[$BCyan\]\u@\[$BYellow\]\h\[\033[1;33m\] \[$White\]\$ \[$Color_Off\]"
-    . ~/.git-completion.bash
+  . ~/.git-completion.bash
+  source conda_select_env.sh
 fi
 
 # These are needed for spyder to work
 # See also: https://groups.google.com/forum/?fromgroups=#!topic/spyderlib/KZ4RxuZ3snc
-export LANG=en_US.UTF-8 
-export LC_ALL=en_US.UTF-8 
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 
 # Colour for ls command under OS X
 export CLICOLOR=1
@@ -23,6 +24,9 @@ alias la='ls -la -color'
 alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 
 alias wget_dir='wget -nH -r --level=1 -k -p'
+alias csa='source activate'
+alias csd='source deactivate'
+alias cse='conda_select_env'
 
 export PATH=$HOME/bin:$PATH
 
