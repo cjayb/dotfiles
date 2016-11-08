@@ -49,11 +49,14 @@ OMP_NUM_THREADS=$MKL_NUM_THREADS
 export MKL_NUM_THREADS
 export OMP_NUM_THREADS
 
-export PATH=/Users/cjb/anaconda/bin:$PATH
+# added by Miniconda3 4.2.12 installer
+export PATH="/Users/cjb/miniconda3/bin:$PATH"
+
+# export PATH=/Users/cjb/anaconda/bin:$PATH
 export PATH=/Users/cjb/.local/bin:$PATH
 
 # anaconda prefers PyQt4 as the API
 # change to pyside if troubles
-export QT_API=pyqt
+# export QT_API=pyqt
 
 export PATH="$HOME/Library/Haskell/bin:$PATH"
