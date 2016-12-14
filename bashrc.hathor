@@ -29,7 +29,7 @@ alias cse='conda_select_env'
 
 export PATH=$HOME/bin:$PATH
 
-export MATLAB_ROOT=/Applications/MATLAB_R2015b.app
+export MATLAB_ROOT=/Applications/MATLAB_R2016b.app
 
 export PATH=$PATH:/Users/cjb/Scripts/cbstat
 
