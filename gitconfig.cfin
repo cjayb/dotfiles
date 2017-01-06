@@ -1,11 +1,16 @@
 [user]
-	email = bailey.cj@gmail.com 
+	email = bailey.cj@gmail.com
 	name = Christopher J. Bailey
 [push]
 	default = current
 
 [core]
-    excludesfile = /users/cjb/.gitignore
+	excludesfile = /users/cjb/.gitignore
 	editor = vim
 [credential]
 	helper = cache --timeout=3600
+
+[merge]
+    tool = diffmerge
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
