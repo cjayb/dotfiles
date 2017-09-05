@@ -28,6 +28,13 @@ alias csd='source deactivate'
 alias cse='conda_select_env'
 alias py='csa dev'
 
+# git aliases
+alias glog='git log --graph --decorate --oneline'
+alias gco='git co'
+alias gcm='git cm'
+alias gst='git status'
+
+
 export PATH=$HOME/bin:$PATH
 
 export MATLAB_ROOT=/Applications/MATLAB_R2016b.app
