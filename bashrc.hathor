@@ -15,7 +15,7 @@ export LC_ALL=en_US.UTF-8
 
 # Colour for ls command under OS X
 export CLICOLOR=1
-export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
+export LSCOLORS="FxGxBxDxCxEgEdxbxgxcxe"  # cf man ls for attributes
 
 alias ll='ls -l -color'
 alias la='ls -la -color'
@@ -26,6 +26,7 @@ alias wget_dir='wget -nH -r --level=1 -k -p'
 alias csa='source activate'
 alias csd='source deactivate'
 alias cse='conda_select_env'
+alias py='csa dev'
 
 export PATH=$HOME/bin:$PATH
 
@@ -60,3 +61,8 @@ export PATH=/Users/cjb/.local/bin:$PATH
 # export QT_API=pyqt
 
 export PATH="$HOME/Library/Haskell/bin:$PATH"
+
+use_neuron () {
+    export PATH=/Applications/NEURON-7.4/nrn/x86_64/bin:$PATH #added by NEURON installer
+    export PYTHONPATH=/Applications/NEURON-7.4/nrn/lib/python #added by NEURON installer
+}
