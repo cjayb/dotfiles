@@ -8,7 +8,7 @@ export PS1
     # echo This shell is interactive
 	if [[ ${DISPLAY} ]]; then xset -b; fi
     stty stop undef # to unmap ctrl-s
-    source ~/src/git/meeg-cfin/configurations/setup_environment.sh 
+    source ~/src/git/meeg-cfin/configurations/setup_environment.sh
     use mne
     gitprompt
 # fi
@@ -27,7 +27,7 @@ then
 
 		if [ $# -lt 1 ]; then
 			SUBJECT=`ls -w1c $SUBJECTS_DIR/ | zenity --list --text="Select subject" --column="Available subjects" --separator=""`
-			if [ $? -eq 0 ]; then 
+			if [ $? -eq 0 ]; then
 				export SUBJECT
 			fi
 		else
@@ -36,7 +36,7 @@ then
 			else
 				echo "Unknown subject: $1"
 			fi
-		fi			
+		fi
 	}
 fi
 
@@ -46,6 +46,17 @@ alias enw='emacs -nw'
 alias edt='emacs'
 alias gtp='gotoproj'
 alias uskb='setxkbmap us'
+
+alias csa='source activate'
+alias csd='source deactivate'
+alias cse='conda_select_env'
+alias py='csa dev'
+
+# git aliases
+alias glog='git log --graph --decorate --oneline'
+alias gco='git co'
+alias gcm='git cm'
+alias gst='git status'
 
 export LC_ALL=en_US.UTF-8
 export QT_API=pyqt
