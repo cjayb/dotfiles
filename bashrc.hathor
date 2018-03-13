@@ -29,8 +29,8 @@ alias csa='conda activate'
 alias csd='conda deactivate'
 #
 
-alias ca='conda activate'
-alias cd='conda deactivate'
+alias act='conda activate'
+alias dct='conda deactivate'
 alias cse='conda_select_env'
 alias py='csa dev'
 
