@@ -23,6 +23,7 @@ conda_select_env ()
         echo "Environment number too large, what are you trying to do?"
         return 1
     fi
-    echo "source activate ${ENVNAMES[$(($enum))]}"
-    eval "source activate ${ENVNAMES[$(($enum))]}"
+    # for conda>=4.4
+    echo "conda activate ${ENVNAMES[$(($enum))]}"
+    eval "conda activate ${ENVNAMES[$(($enum))]}"
 }

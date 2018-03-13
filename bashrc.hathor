@@ -23,8 +23,14 @@ alias la='ls -la -color'
 alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 
 alias wget_dir='wget -nH -r --level=1 -k -p'
-alias csa='source activate'
-alias csd='source deactivate'
+
+# keep here for now because of muscle memory
+alias csa='conda activate'
+alias csd='conda deactivate'
+#
+
+alias ca='conda activate'
+alias cd='conda deactivate'
 alias cse='conda_select_env'
 alias py='csa dev'
 
@@ -58,7 +64,12 @@ export MKL_NUM_THREADS
 export OMP_NUM_THREADS
 
 # added by Miniconda3 4.2.12 installer
-export PATH="/Users/cjb/miniconda3/bin:$PATH"
+# export PATH="/Users/cjb/miniconda3/bin:$PATH"
+
+# for conda>=4.4
+. /Users/cjb/miniconda3/etc/profile.d/conda.sh
+conda activate base
+
 
 # export PATH=/Users/cjb/anaconda/bin:$PATH
 export PATH=/Users/cjb/.local/bin:$PATH
