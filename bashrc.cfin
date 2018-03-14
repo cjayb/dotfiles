@@ -26,6 +26,9 @@ alias csd='source deactivate'
 alias cse='conda_select_env'
 alias py='csa dev'
 
+# IHR admin
+export PATH=${PATH}:/projects/MEG_service/scripts/IHR-admin/bin
+
 # git aliases
 alias glog='git log --graph --decorate --oneline'
 alias gco='git co'
