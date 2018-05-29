@@ -11,7 +11,7 @@ Simply clone the dotfiles, start vim and run the command
 
 ## On a new installation
 
-To get the links right, do
+To get the links right, first do
 
 	ln -s dotfiles/vim .vim
 	ln -s dotfiles/vimrc .vimrc

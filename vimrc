@@ -11,7 +11,9 @@ Plug 'junegunn/vim-easy-align'
 " Plug 'davidhalter/jedi-vim'
 " Plug 'tpope/vim-fugitive'
 Plug 'ervandew/supertab'
-Plug 'bling/vim-airline'
+"Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " Plug 'ivanov/vim-ipython', {'dir': '~/.vim/ftplugin'}
 
@@ -94,7 +96,8 @@ set splitbelow
 set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_alt_sep = '|'
-let g:airline_theme='jellybeans'
+" let g:airline_theme='jellybeans'
+let g:airline_theme='deus'
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tmuxline#enabled = 0 
 

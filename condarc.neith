@@ -1,0 +1,14 @@
+channels:
+  - cjayb
+  - defaults
+  # - conda-forge
+
+envs_dir:
+  - /Users/cjb/miniconda_envs
+
+create_default_packages:
+  - python=3
+  - pip
+  - setuptools
+  - numpy
+  - ipython
