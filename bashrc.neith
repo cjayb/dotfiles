@@ -43,7 +43,7 @@ alias gst='git status'
 
 export PATH=$HOME/bin:$PATH
 
-export MATLAB_ROOT=/Applications/MATLAB_R2016b.app
+export MATLAB_ROOT=/Applications/MATLAB_R2018a.app
 
 export PATH=$PATH:/Users/cjb/Scripts/cbstat
 
@@ -68,7 +68,7 @@ export OMP_NUM_THREADS
 
 # for conda>=4.4
 . /Users/cjb/miniconda3/etc/profile.d/conda.sh
-conda activate base
+conda activate ebtks
 
 
 # export PATH=/Users/cjb/anaconda/bin:$PATH
@@ -83,4 +83,14 @@ export PATH="$HOME/Library/Haskell/bin:$PATH"
 use_neuron () {
     export PATH=/Applications/NEURON-7.4/nrn/x86_64/bin:$PATH #added by NEURON installer
     export PYTHONPATH=/Applications/NEURON-7.4/nrn/lib/python #added by NEURON installer
+}
+
+use_simnibs () {
+    conda deactivate
+    export SIMNIBSDIR=/Users/cjb/UnixApps/simnibs-releases/simnibs_2.0.1
+    source $SIMNIBSDIR/simnibs_conf.sh
+    FSLDIR=/Users/cjb/UnixApps/fsl
+    . ${FSLDIR}/etc/fslconf/fsl.sh
+    PATH=${FSLDIR}/bin:${PATH}
+    export FSLDIR PATH
 }
