@@ -1,3 +1,7 @@
+" To reload the plugins, start vim, then issue these
+" :PlugClean
+" :PlugInstall
+" and restart vim
 set nocompatible
 filetype off
 " set rtp+=~/.vim/bundle/vundle/
