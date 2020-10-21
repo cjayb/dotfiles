@@ -7,6 +7,9 @@ if [ -t 0 ]; then
     done
 	export PS1="\[$Green\][\w]\[$Purple\]\$(__git_ps1)\n\[$BCyan\]\u@\[$BYellow\]\h\[\033[1;33m\] \[$White\]\$ \[$Color_Off\]"
 fi
+#export CC=/usr/loca/bin/gcc-9
+#export CXX=/usr/loca/bin/g++-9
+#export FC=/usr/loca/bin/gfortran-9
 
 # These are needed for spyder to work
 # See also: https://groups.google.com/forum/?fromgroups=#!topic/spyderlib/KZ4RxuZ3snc
@@ -37,13 +40,18 @@ alias py='csa dev'
 # git aliases
 alias glog='git log --graph --decorate --oneline'
 alias gco='git co'
-alias gcm='git cm'
+alias gcm='git commit -m'
 alias gst='git status'
+alias gad='git add -u'
 
+alias icode='/Applications/Visual\ Studio\ Code\ -\ Insiders.app/Contents/Resources/app/bin/code'
 
 export PATH=$HOME/bin:$PATH
 
-export MATLAB_ROOT=/Applications/MATLAB_R2018a.app
+# export MATLAB_ROOT=/Applications/MATLAB_R2018a.app
+export MATLAB_ROOT=/Applications/MATLAB_R2019b.app
+#alias matlab=${MATLAB_ROOT}/bin/matlab
+export PATH=${PATH}:${MATLAB_ROOT}/bin
 
 export PATH=$PATH:/Users/cjb/Scripts/cbstat
 
@@ -55,6 +63,7 @@ export MNE_PYTHON=~/src/git/mne-python
 export MNE_DATASETS_SAMPLE_PATH=~/data/templates
 
 export FREESURFER_HOME=~/UnixApps/freesurfer
+# export FREESURFER_HOME=~/UnixApps/freesurfer-releases/freesurfer-Darwin-OSX-stable-pub-v6.0.0
 . $FREESURFER_HOME/SetUpFreeSurfer.sh
 
 
@@ -80,15 +89,32 @@ export PATH=/Users/cjb/.local/bin:$PATH
 
 export PATH="$HOME/Library/Haskell/bin:$PATH"
 
-use_neuron () {
-    export PATH=/Applications/NEURON-7.4/nrn/x86_64/bin:$PATH #added by NEURON installer
-    export PYTHONPATH=/Applications/NEURON-7.4/nrn/lib/python #added by NEURON installer
+use_hnn () {
+    csa hnn
+    PY_BINDIR=$(dirname `which python3`)
+    # These were needed when trying to compile NEURON on Catalina (failed)
+    # pip install neuron (7.8) works without
+    #export CPU=$(uname -m)
+    #export PATH=$PATH:/opt/nrn/$CPU/bin
+    #export OMPI_MCA_btl_base_warn_component_unused=0
+    #export PYTHONPATH=/opt/nrn/lib/python:$PYTHONPATH
+    if [[ ! -f ${PY_BINDIR}/hnn ]] ; then
+        echo '#!/bin/bash' | tee ${PY_BINDIR}/hnn
+        echo 'cd /Users/cjb/src/git/hnn' | tee -a ${PY_BINDIR}/hnn
+        echo 'python3 hnn.py' | tee -a ${PY_BINDIR}/hnn
+        chmod 755 ${PY_BINDIR}/hnn
+    fi
 }
-
+use_imagemagick () {
+    export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
+}
 use_simnibs () {
-    conda deactivate
-    export SIMNIBSDIR=/Users/cjb/UnixApps/simnibs-releases/simnibs_2.0.1
-    source $SIMNIBSDIR/simnibs_conf.sh
+    # conda deactivate  #  v3x of simnibs is safe to use within env?
+    ## Added by SimNIBS
+    SIMNIBS_BIN="/Users/cjb/UnixApps/SimNIBS/bin"
+    export PATH=${PATH}:${SIMNIBS_BIN}
+    # export SIMNIBSDIR=/Users/cjb/UnixApps/simnibs-releases/simnibs_2.1.1
+    # source $SIMNIBSDIR/simnibs_conf.sh
     FSLDIR=/Users/cjb/UnixApps/fsl
     . ${FSLDIR}/etc/fslconf/fsl.sh
     PATH=${FSLDIR}/bin:${PATH}

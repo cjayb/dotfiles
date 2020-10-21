@@ -1,11 +1,12 @@
+channel_priority : strict
 channels:
-  - cjayb
   - defaults
-  # - conda-forge
+  - conda-forge
 
-create_default_packages:
-  - python=3
-  - pip
-  - setuptools
-  - numpy
-  - ipython
+#create_default_packages:
+#  - python=3
+#  - pip
+#  - setuptools
+#  - numpy
+#  - ipython
+allow_conda_downgrades: false
