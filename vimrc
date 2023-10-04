@@ -9,6 +9,7 @@ filetype off
 call plug#begin('~/.vim/plugged')
 
 " Make sure you use single quotes
+" Plug 'nanotech/jellybeans.vim', { 'tag': 'v1.7' }
 Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/vim-easy-align'
 
@@ -49,10 +50,10 @@ filetype plugin indent on    " enable loading indent file for filetype
 set t_Co=256 " make sure vim realises terminal is 256 colors
 syntax enable
 set background=dark
-colorscheme jellybeans
+" colorscheme jellybeans
 " seoul256 (dark):
-" "   Range:   233 (darkest) ~ 239 (lightest)
-" "   Default: 237
+"    Range:   233 (darkest) ~ 239 (lightest)
+"    Default: 237
 let g:seoul256_background = 234
 colo seoul256
 "

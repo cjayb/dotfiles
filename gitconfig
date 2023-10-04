@@ -10,6 +10,8 @@
 	editor = vim
 [credential]
 	helper = cache --timeout=3600
+	helper = 
+	helper = /usr/local/share/gcm-core/git-credential-manager-core
 
 # http://haacked.com/archive/2014/07/28/github-flow-aliases/
 [alias]
@@ -33,19 +35,7 @@
         tool = vscode
 [difftool "vscode"]
         cmd = code --wait --diff $LOCAL $REMOTE
-[difftool]
-	prompt = false
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
-[diff "jupyternotebook"]
-	command = git-nbdiffdriver diff
-[difftool "nbdime"]
-	cmd = git-nbdifftool diff \"$LOCAL\" \"$REMOTE\"
-[merge "jupyternotebook"]
-	driver = git-nbmergedriver merge %O %A %B %L %P
-	name = jupyter notebook merge driver
-[mergetool "nbdime"]
-	cmd = git-nbmergetool merge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
-[mergetool]
-	prompt = false
+[credential "https://dev.azure.com"]
+	useHttpPath = true
+[credential "https://git.base.dias.rm.dk"]
+	provider = generic
