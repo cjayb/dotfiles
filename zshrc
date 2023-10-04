@@ -17,7 +17,7 @@ ZSH_THEME="robbyrussell"
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # Uncomment the following line to use case-sensitive completion.
-CASE_SENSITIVE="true"
+# CASE_SENSITIVE="true"
 
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
@@ -70,9 +70,7 @@ CASE_SENSITIVE="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(
-  git
-  iterm2)
+plugins=(git vscode azure iterm2)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -102,31 +100,22 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/cjb/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/Users/chrbai/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Users/cjb/miniforge3/etc/profile.d/conda.sh" ]; then
-        . "/Users/cjb/miniforge3/etc/profile.d/conda.sh"
+    if [ -f "/Users/chrbai/miniforge3/etc/profile.d/conda.sh" ]; then
+        . "/Users/chrbai/miniforge3/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/cjb/miniforge3/bin:$PATH"
+        export PATH="/Users/chrbai/miniforge3/bin:$PATH"
     fi
 fi
 unset __conda_setup
+
+if [ -f "/Users/chrbai/miniforge3/etc/profile.d/mamba.sh" ]; then
+    . "/Users/chrbai/miniforge3/etc/profile.d/mamba.sh"
+fi
 # <<< conda initialize <<<
 
-export PATH=${PATH}:/Users/cjb/go/bin
-
-alias csa='conda activate'
-alias csd='conda deactivate'
-alias cse='conda_select_env'
-
-# git aliases
-alias glog='git log --graph --decorate --oneline'
-alias gco='git co'
-alias gcm='git commit -m'
-alias gst='git status'
-alias gad='git add -u'
