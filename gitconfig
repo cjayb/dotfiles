@@ -1,6 +1,10 @@
 [user]
 	email = bailey.cj@gmail.com
 	name = Christopher J. Bailey
+
+[includeIf "gitdir:~/src/norlys/"]
+    path = ~/src/norlys/.gitconfig
+
 [push]
 	default = current
 
@@ -8,6 +12,10 @@
 	excludesfile = /Users/cjb/.gitignore
     filemode = true
 	editor = vim
+
 [credential]
 	helper = cache --timeout=3600
     helper = /usr/local/bin/git-credential-manager
+
+[credential "https://github.com/norlys-ai"]
+	username = cjayb-norlys
