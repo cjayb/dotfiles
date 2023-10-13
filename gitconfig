@@ -19,5 +19,7 @@
 
 [credential "https://github.com/norlys-ai"]
 	username = cjayb-norlys
+[credential "https://github.com/cjayb-norlys"]
+	username = cjayb-norlys
 [init]
 	defaultBranch = main
